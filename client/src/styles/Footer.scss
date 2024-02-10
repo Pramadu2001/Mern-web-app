@@ -1,0 +1,139 @@
+// Footer.scss
+
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 10px 70px;
+  background: #737373;
+
+  @include lg {
+    padding: 10px 30px;
+  }
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .footer_left_socials {
+      margin-bottom: 20px;
+
+      h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .links {
+        ul {
+          list-style: none;
+          display: flex;
+          gap: 15px;
+
+          li {
+            a {
+              text-decoration: none;
+              color: #eee;
+              font-size: 1.5rem;
+
+              &:hover {
+                color: #ffcc00;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  &_center {
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #fff;
+      display: inline;
+      row-gap: 1.5rem;
+      text-decoration: underline;// Add this property to make it inline
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 120px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #fff;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #fff;
+          
+          font-size: 1.3rem;
+
+         
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px; // Adjust the line spacing here
+        }
+
+        &:hover {
+          color: #ffcc00;
+        }
+      }
+    }
+
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &_right {
+    max-width: 350px;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .credit {
+    text-align: center;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #fff;
+    padding: 1.5rem 0.5rem;
+  
+  }
+  .credit:hover{
+      color: #ffcc00;
+  }
+}
